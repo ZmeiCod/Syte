@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zozulinsky Innovations</title>
+	<link rel="icon" type="image" href="/img/icon.png">
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer></script>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/adaptiv.css">
+    <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+    
+    <header class="header">
+		<div class="container">
+			<div class="header-wrapper">
+				
+				<a href="#preview" class="logo">
+					<img class="logo-img" src="\img\icon.png" alt="logo">
+				</a>
+
+				<div class="typing-block">
+					<div id="typed-strings">
+						<span> UI / UX ДИЗАЙНЕ </span>
+						<span> ВЕБ-РАЗРАБОТКЕ </span>
+						<span> РАЗРАБОТКЕ БЭКЕНДА </span>
+						<span> ХОСТИНГЕ СЕРВИСОВ </span>
+						<span> ИНФОРМАЦИОННОЙ БЕЗОПАСНОТИ </span>
+					</div>
+					<div class="typing-text">
+						<span class="fixed-text">ЛУЧШИЕ В</span>
+						<span id="typed"></span>
+					</div>
+				</div>
+		
+				<div class="nav-burger">
+					<span></span>
+				</div>
+
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-link"><a href="#services-block" class="nav-link nav-link-text">Услуги</a></li>
+						<li class="nav-link"><a href="#connection" class="nav-link nav-link-text">Контакты</a></li>
+						<li class="nav-link"><a href="#job" class="nav-link nav-link-text">Вакансии</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+    </header>
+
+	<div class="floating-wrapper">
+		<div class="floating-content">
+
+			<main>
+				<div id="preview" class="preview">
+					
+					<div class="container">
+						<img data-speed=".6" class="preview-logo" src="img/hero.png" alt="Alt" >
+						<div data-speed=".75" class="preview-title">
+							<h1 class="preview-text"> Zozulinsky<br> Innovations </h1>
+						</div>
+					</div>
+				</div>
+		
+				<div class="services">
+					<div class="container">
+						<div class="services-block">
+							<div id="services-block" data-speed="1" class="services-left">
+								<img class="services-item" src="../img/work/frontend.png" alt="frontend">
+								<div class="services-item servicer-text">
+									<h2 class="services-text-h">РАЗРАБОТКА БЭКЕНДА</h2>
+									<p class="services-text-p">Мы предлагаем полный спектр услуг, начиная с создания телеграмм ботов и заканчивая разработкой серверной части крупного проекта.</p>
+								</div>
+								<img class="services-item" src="../img/work/hosting.png" alt="Alt">
+								<div class="services-item servicer-text">
+									<h2 class="services-text-h">ХОСТИНГ СЕРВИСОВ</h2>
+									<p class="services-text-p">Бесплатно поможем установить необходимое ПО для начала работы. Вы платите только за аренду мощностей на нашем сервере. Безопасность Ваших файлов гарантирована</p>
+								</div>
+							</div>
+							<div data-speed=".9" class="services-right">
+								<div class="services-item servicer-text">
+									<h2 class="services-text-h">ВЕБ-РАЗРАБОТКА</h2>
+									<p class="services-text-p">Мы любим создавать красивые и плавные сайты с ноткой минимализма. Поможем Вам начиная от разработки дизайна и основной концепции, до размещения на хостинге</p>
+								</div>
+								<img class="services-item" src="../img/work/backend.png" alt="backend">
+								<div class="services-item servicer-text">
+									<h2 class="services-text-h">ИНФОРМАЦИОННАЯ БЕЗОПАСНОТЬ</h2>
+									<p class="services-text-p">Наши специалисты помогут в защите Ваших сервисов и устройств от нессанкционированого доступа</p>
+								</div>
+								<img class="services-item" src="../img/work/infosec.png" alt="Alt">
+							</div>
+						</div>
+					</div>
+				</div>
+		
+
+				<div id="connection" class="connection">
+					<div class="container">
+						<form data-speed="1" data-leg=".6" action="/php/sending.php" method="POST" id="forms" class="connection-block">
+							<label > 
+								Ваше имя:*<br>
+								<input class="forms -req" type="text" name="name" placeholder="Иван Иванов">
+							</label>
+							<label >
+								Электронная почта:*<br>
+								<input class="forms -req -email" type="email" name="email" placeholder="example@email.com">
+							</label>
+							<label>
+								Сообщение:<br>
+								<textarea  id="autoExpand"  class="forms" name="comment" placeholder="Расскажите кратко о Вашем проекте"></textarea>
+							</label>
+							<input type="hidden" name="spamProtection" value="">
+							<button type="submit"> Отправить </button>
+						</form>
+					</div>
+				</div>
+
+
+				<div id="job" class="job">
+					<div class="container">
+						<div data-speed="1" data-leg=".6" class="job-wrapper">
+
+							<div class="job-heading">
+								<h1>ОТКРЫТЫЕ ВАКАНСИИ</h1>
+							</div>
+	
+							<div class="job-block">
+								<div class="job-title">ДИЗАЙНЕР
+									<p class="job-text"> <br>
+										Обязанности:<br>
+										Создание макетов сайтов, интерфейсов: от разработки концепции до подготовки детализированных прототипов с готовым дизайном<br>
+										Разработка иконок, баннеров, заставок и различный анимаций как одни из элементов интерфейса<br>
+										Проводить полноценное дизайн-ревью функциональности перед релизом<br>
+										Общаться с продакт-менеджерами, разработчиками, тестировщиками и иными сотрудниками по вопросам проектов<br>
+										<br>
+										Требования:<br>
+										Умеете вести сразу несколько проектов и легко переключаетесь между задачами разного масштаба<br>
+										Умеете анализировать пользовательский опыт и на основе анализа предлагать, защищать и реализовывать улучшения<br>
+										Обладаете креативным и системным мышлением<br>
+										Способны слушать и слышать участников проектов, умеете находить с ними общий язык<br>
+									</p>
+								</div>
+								<div class="job-title">ВЕБ-РАЗРАБОТЧИК
+									<p class="job-text"> <br>
+										Обязанности:<br>
+										Разрабатывать клиентские приложения, заниматься поддержкой существующих решений<br>
+										Оптимизировать работу frontend-приложений<br>
+										Создавать и соблюдать культуру разработки, пользоваться системами ведения задач и документации<br>
+										<br>
+										Требования:<br>
+										Уверенные знания HTML/CSS, JavaScript, опыт работы с React<br>
+										Владение навыками работы с Git<br>
+										Умение писать понятный для других разработчиков код<br>
+										<br>
+										Желательно:<br>
+										Опыт написания тестов<br>
+										Наличие GitHub репозитория с примерами кода будет плюсом<br>
+									</p>
+								</div>
+								<div class="job-title">БЭКЕНД РАЗРАБОТЧИК
+									<p class="job-text">
+										<br>
+										В данный момент не требуется
+									</p>
+								</div>
+							</div>
+
+							<div class="job-block">
+								<div class="job-title">СПЕЦИАЛИСТ ИБ
+									<p class="job-text"> <br>
+										В данный момент не требуется
+									</p>
+								</div>
+								<div class="job-title">HR МЕНЕДЖЕР
+									<p class="job-text"> <br>
+										В данный момент не требуется
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-text">
+						<h1>2024 ©️ Zmei Coder Innovations</h1>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+	</div>
+
+</body>
+</html>
